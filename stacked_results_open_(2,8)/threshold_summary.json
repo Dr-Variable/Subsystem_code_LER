@@ -1,0 +1,62 @@
+{
+  "boundary": "open",
+  "z_boundary": "open",
+  "noise": {
+    "p_definition": "p=px+py+pz",
+    "fractions_X_Y_Z": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "model": "IID single-qubit Pauli, code capacity",
+    "syndrome_and_correction": "perfect",
+    "success": "C E belongs to the gauge group, modulo global phase"
+  },
+  "decoder": "exact_degenerate_maximum_likelihood",
+  "asymptotic_threshold": {
+    "p_threshold": null,
+    "status": "not_determined_from_finite_size_crossings",
+    "inferred_from_four_curve_fit": false,
+    "scope": "Periodic layers, open z; Lx=Lz=L, Ly=2, L->infinity; IID depolarizing code-capacity noise",
+    "explanation": "The analytic square-family depolarizing conclusion is not applied to these settings. Pairwise finite-size crossings alone do not establish an asymptotic threshold.",
+    "background_reference": "https://arxiv.org/abs/1209.0794",
+    "proof_location": "FULL_RUN.md, Threshold interpretation"
+  },
+  "adjacent_size_pairs": [
+    {
+      "size_a": [
+        2,
+        1,
+        2
+      ],
+      "size_b": [
+        8,
+        1,
+        5
+      ],
+      "status": "crossings_found",
+      "crossings": [
+        {
+          "p_crossing": 0.022431640625,
+          "ler_at_last_evaluation_or_interpolation": 0.021098392508375356,
+          "initial_bracket": [
+            0.02,
+            0.025
+          ],
+          "final_bracket": [
+            0.022431640625,
+            0.02244140625
+          ],
+          "bracket_width": 9.765625000001527e-06,
+          "iterations": 9,
+          "tolerance_met": true,
+          "direction": "larger_code_becomes_worse",
+          "method": "exact_ML_bisection"
+        }
+      ]
+    }
+  ],
+  "numerical_interval_meaning": "Bisection brackets, not statistical confidence intervals.",
+  "crossing_source": "Exact model rates; Monte Carlo estimates are plotted separately.",
+  "crossing_limit": "Only crossings bracketed by the supplied p grid are detected."
+}

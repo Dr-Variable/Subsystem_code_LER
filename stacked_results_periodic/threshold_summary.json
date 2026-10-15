@@ -1,0 +1,124 @@
+{
+  "noise": {
+    "p_definition": "p=px+py+pz",
+    "fractions_X_Y_Z": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "model": "IID single-qubit Pauli, code capacity",
+    "syndrome_and_correction": "perfect",
+    "success": "C E belongs to the gauge group, modulo global phase"
+  },
+  "decoder": "exact_degenerate_maximum_likelihood",
+  "asymptotic_threshold": {
+    "p_threshold": 0.0,
+    "status": "analytic_zero_threshold",
+    "inferred_from_four_curve_fit": false,
+    "scope": "Lx=Lz=L, Ly=2, L->infinity; IID depolarizing code-capacity noise",
+    "explanation": "The gauge group is that of a (2L)x(2L) Bacon-Shor code under a qubit permutation. At every fixed p>0 the depolarizing gauge-coset distribution approaches uniform as L grows, so optimal block LER approaches 3/4. Finite-size crossings are crossovers, not a positive asymptotic threshold.",
+    "background_reference": "https://arxiv.org/abs/1209.0794",
+    "proof_location": "FULL_RUN.md, Threshold interpretation"
+  },
+  "adjacent_size_pairs": [
+    {
+      "size_a": [
+        2,
+        2,
+        2
+      ],
+      "size_b": [
+        3,
+        2,
+        3
+      ],
+      "status": "crossings_found",
+      "crossings": [
+        {
+          "p_crossing": 0.05590820312499999,
+          "ler_at_last_evaluation_or_interpolation": 0.08889665178267409,
+          "initial_bracket": [
+            0.055,
+            0.06
+          ],
+          "final_bracket": [
+            0.05590820312499999,
+            0.05591796874999999
+          ],
+          "bracket_width": 9.765624999998057e-06,
+          "iterations": 9,
+          "tolerance_met": true,
+          "direction": "larger_code_becomes_worse",
+          "method": "exact_ML_bisection"
+        }
+      ]
+    },
+    {
+      "size_a": [
+        3,
+        2,
+        3
+      ],
+      "size_b": [
+        4,
+        2,
+        4
+      ],
+      "status": "crossings_found",
+      "crossings": [
+        {
+          "p_crossing": 0.039384765625000005,
+          "ler_at_last_evaluation_or_interpolation": 0.04030723800599225,
+          "initial_bracket": [
+            0.035,
+            0.04
+          ],
+          "final_bracket": [
+            0.03937500000000001,
+            0.039384765625000005
+          ],
+          "bracket_width": 9.765624999998057e-06,
+          "iterations": 9,
+          "tolerance_met": true,
+          "direction": "larger_code_becomes_worse",
+          "method": "exact_ML_bisection"
+        }
+      ]
+    },
+    {
+      "size_a": [
+        4,
+        2,
+        4
+      ],
+      "size_b": [
+        5,
+        2,
+        5
+      ],
+      "status": "crossings_found",
+      "crossings": [
+        {
+          "p_crossing": 0.030341796875,
+          "ler_at_last_evaluation_or_interpolation": 0.018568827902590065,
+          "initial_bracket": [
+            0.03,
+            0.035
+          ],
+          "final_bracket": [
+            0.030341796875,
+            0.0303515625
+          ],
+          "bracket_width": 9.765624999998057e-06,
+          "iterations": 9,
+          "tolerance_met": true,
+          "direction": "larger_code_becomes_worse",
+          "method": "exact_ML_bisection"
+        }
+      ]
+    }
+  ],
+  "numerical_interval_meaning": "Bisection brackets, not statistical confidence intervals.",
+  "crossing_source": "Exact model rates; Monte Carlo estimates are plotted separately.",
+  "crossing_limit": "Only crossings bracketed by the supplied p grid are detected."
+}
